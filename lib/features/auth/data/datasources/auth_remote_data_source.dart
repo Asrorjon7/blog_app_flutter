@@ -33,6 +33,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       if (response.user == null) {
         throw ServerException("User do'nt registered");
       }
+
       print(response.user!.toJson().toString());
 
       return UserModel.fromJson(response.user!.toJson());
